@@ -50,7 +50,7 @@ const Index = () => {
             <img
               src={mrtIllustration}
               alt="MRT Jakarta Illustration"
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto rounded-lg"
             />
           </motion.div>
         </div>

@@ -43,44 +43,20 @@ const Dashboard = () => {
     },
   ];
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* 🌟 Header fade in */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <DashboardHeader onLogout={handleLogout} />
-      </motion.div>
+      {/* Header */}
+      <DashboardHeader onLogout={handleLogout} />
 
       <main className="flex-1 bg-gradient-to-b from-background to-muted">
-        <motion.div
-          className="max-w-6xl mx-auto px-4 sm:px-6 py-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            {/* Tabs filter */}
             <motion.div
-              className="grid w-full max-w-md grid-cols-3 mb-10 mx-auto"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
+              className="justify-self-center mb-5"
             >
               <TabsList>
                 <TabsTrigger value="all">Semua Polis</TabsTrigger>
@@ -92,23 +68,30 @@ const Dashboard = () => {
             {/* ALL POLICIES */}
             <TabsContent value="all" className="space-y-10">
               <motion.div
+                layout
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 {policies.map((policy, index) => (
-                  <motion.div key={index} variants={cardVariants}>
+                  <motion.div
+                    key={index}
+                    layout
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                  >
                     <PolicyCard {...policy} />
                   </motion.div>
                 ))}
               </motion.div>
 
               <motion.div
-                className="whitespace-nowrap flex items-center justify-between text-sm text-muted-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center justify-between text-sm text-muted-foreground whitespace-nowrap"
               >
                 <p>Menampilkan 1 / 1</p>
                 <Pagination>
@@ -127,13 +110,20 @@ const Dashboard = () => {
             {/* ACTIVE POLICIES */}
             <TabsContent value="active" className="space-y-10">
               <motion.div
+                layout
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 {policies.map((policy, index) => (
-                  <motion.div key={index} variants={cardVariants}>
+                  <motion.div
+                    key={index}
+                    layout
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                  >
                     <PolicyCard {...policy} />
                   </motion.div>
                 ))}
@@ -143,26 +133,19 @@ const Dashboard = () => {
             {/* EXPIRED POLICIES */}
             <TabsContent value="expired" className="space-y-10">
               <motion.div
-                className="text-center py-12 text-muted-foreground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4 }}
+                className="text-center py-12 text-muted-foreground"
               >
                 Tidak ada polis yang kedaluwarsa
               </motion.div>
             </TabsContent>
           </Tabs>
-        </motion.div>
+        </div>
       </main>
 
-      {/* Footer fade in */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        <Footer />
-      </motion.div>
+      <Footer />
     </div>
   );
 };
