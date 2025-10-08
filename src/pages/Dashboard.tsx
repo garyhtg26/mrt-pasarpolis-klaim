@@ -64,7 +64,7 @@ const Dashboard = () => {
                 ))}
               </div>
 
-              <div className="flex items-center justify-between text-sm text-muted-foreground">
+              <div className="whitespace-nowrap flex items-center justify-between text-sm text-muted-foreground">
                 <p>Menampilkan 1 / 1</p>
                 <Pagination>
                   <PaginationContent>
