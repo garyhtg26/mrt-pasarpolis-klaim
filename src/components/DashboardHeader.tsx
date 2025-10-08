@@ -44,7 +44,17 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="text-primary-foreground hover:bg-primary/80">
-                <span className="text-xl mr-1">🇮🇩</span>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              className="w-full h-full"
+            >
+              <circle cx="256" cy="256" r="256" fill="#d80027" />
+              <path
+                fill="#f0f0f0"
+                d="M0 256c0 141.4 114.6 256 256 256s256-114.6 256-256H0z"
+              />
+            </svg>
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
