@@ -10,7 +10,7 @@ const Index = () => {
       <Header />
       
       <main className="flex-1 bg-gradient-to-b from-background to-muted">
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-0 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Content */}
             <div className="space-y-6">
