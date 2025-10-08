@@ -11,12 +11,12 @@ const Header = () => {
           <img
             src={pplogo}
             alt="PasarPolis Logo"
-            className="h-8 md:h-10 w-auto"
+            className="h-6 md:h-8 w-auto"
           />
            <img
             src={jasindologo}
             alt="PasarPolis Logo"
-            className="h-8 md:h-16 w-auto"
+            className="h-14 md:h-16 w-auto"
           />
         </div>
 
