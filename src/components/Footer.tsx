@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="bg-black text-white py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-16 items-start">
         
-        {/* Kolom 1 */}
         <div>
           <h3 className="text-xl font-semibold mb-3">Hubungi Kami</h3>
           <p className="text-gray-400 max-w-sm">
@@ -13,7 +12,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Kolom 2 - Indonesia */}
         <div>
           <h4 className="text-lg font-medium mb-4">Indonesia</h4>
           <div className="space-y-2 text-gray-200">
@@ -28,7 +26,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Kolom 3 - Thailand */}
         <div>
           <h4 className="text-lg font-medium mb-4">Thailand</h4>
           <div className="space-y-2 text-gray-200">
@@ -43,7 +40,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Kolom 4 - Vietnam */}
         <div >
           <h4 className="text-lg font-medium mb-4">Vietnam</h4>
           <div className="space-y-2 text-gray-200 mb-4">

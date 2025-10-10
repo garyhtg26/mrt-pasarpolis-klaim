@@ -13,7 +13,6 @@ const Index = () => {
       <main className="flex-1 bg-gradient-to-b from-background to-muted">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* 🔹 Login Form (appears first on mobile) */}
             <motion.div
               className="flex justify-center lg:justify-end order-1 lg:order-2"
               initial={{ opacity: 0, y: 30 }}
@@ -23,7 +22,6 @@ const Index = () => {
               <LoginForm />
             </motion.div>
 
-            {/* 🔹 Text + Feature Section */}
             <motion.div
               className="space-y-6 order-2 lg:order-1"
               initial={{ opacity: 0, y: 30 }}
@@ -40,7 +38,6 @@ const Index = () => {
             </motion.div>
           </div>
 
-          {/* 🔹 Illustration */}
           <motion.div
             className="mt-16"
             initial={{ opacity: 0, y: 40 }}

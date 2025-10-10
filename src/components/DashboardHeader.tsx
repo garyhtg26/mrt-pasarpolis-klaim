@@ -17,9 +17,7 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
   return (
     <header className="bg-primary text-primary-foreground shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        {/* --- Kiri: Logo & Nav --- */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
-          {/* Logo Section */}
           <div className="flex items-center gap-3">
             <img
               src={pplogo}
@@ -33,7 +31,6 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
             />
           </div>
 
-          {/* Navigation */}
           <nav className="flex gap-6 text-sm sm:text-base">
             <a
               href="#"
@@ -50,9 +47,7 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
           </nav>
         </div>
 
-        {/* --- Kanan: Language + User + Logout --- */}
         <div className="flex items-center gap-2 sm:gap-4 self-end md:self-auto">
-          {/* Language Selector */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -82,7 +77,6 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* User Menu */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -100,7 +94,6 @@ const DashboardHeader = ({ onLogout }: DashboardHeaderProps) => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Logout Button */}
           <Button
             variant="ghost"
             size="sm"

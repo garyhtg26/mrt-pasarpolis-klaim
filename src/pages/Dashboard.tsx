@@ -21,7 +21,6 @@ const Dashboard = () => {
     navigate("/");
   };
 
-  // Sample data
   const policies = [
     {
       policyType: "mrt-travel-protection",
@@ -45,7 +44,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      {/* Header */}
       <DashboardHeader onLogout={handleLogout} />
 
       <main className="flex-1 bg-gradient-to-b from-background to-muted">
@@ -64,8 +62,6 @@ const Dashboard = () => {
                 <TabsTrigger value="expired">Polis Kedaluwarsa</TabsTrigger>
               </TabsList>
             </motion.div>
-
-            {/* ALL POLICIES */}
             <TabsContent value="all" className="space-y-10">
               <motion.div
                 layout
@@ -107,7 +103,6 @@ const Dashboard = () => {
               </motion.div>
             </TabsContent>
 
-            {/* ACTIVE POLICIES */}
             <TabsContent value="active" className="space-y-10">
               <motion.div
                 layout
@@ -130,7 +125,6 @@ const Dashboard = () => {
               </motion.div>
             </TabsContent>
 
-            {/* EXPIRED POLICIES */}
             <TabsContent value="expired" className="space-y-10">
               <motion.div
                 initial={{ opacity: 0 }}
