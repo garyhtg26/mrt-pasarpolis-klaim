@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import FeatureSection from "@/components/FeatureSection";
 import LoginForm from "@/components/LoginForm";
 import Footer from "@/components/Footer";
-import mrtIllustration from "@/assets/mrt-illustration.png";
+import mrtIllustration from "@/assets/mrt-illustration2.png";
 
 const Index = () => {
   return (
